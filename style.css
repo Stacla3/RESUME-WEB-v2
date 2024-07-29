@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    background-color: white;
+}
+nav {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    overflow: hidden;
+    border-bottom: 2px solid #ffffff;
+    z-index: 1;
+    
+}
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #0098EF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.side-nav a {
+    background-color: #0098EF;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: grid;
+    transition: 0.3s;
+  }
+.side-nav a:hover {
+    color: #c9c9c9;
+}
+  
+.closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} 
+.nav-left {
+    background-color: white;
+    margin-left: 2rem;
+}
+.c-left {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: white;
+}
+#opennav {
+    display: none;
+    cursor: pointer;
+    color: #0098EF;
+    font-size: 20px;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+#opennav:hover{
+    color: rgb(1, 88, 134);
+}
+.c-left p{
+    letter-spacing: 2px;
+    font-weight: normal;
+    background-color: white;
+    margin-left: 1rem;
+}
+.c-left img{
+    border-radius: 50%;
+    background-color: white;
+}
+.c-right ul{
+    font-weight: normal;
+    background-color: white;
+    list-style-type: none;
+    display: flex;
+}
+.c-right a{
+    letter-spacing: 1px;
+    color: #0098EF;
+    text-decoration: none;
+    background-color: white;
+    margin-right: 3rem;
+}
+.c-right a:link {
+    color: #0098EF;
+}
+.c-right a:visited{
+    color: #0098EF;
+}
+.c-right a:hover{
+    color: rgb(1, 88, 134);
+}
+.c-right a:active{
+    color: rgb(1, 88, 134);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(Image/pexels-zhangkaiyv-1139556_0.jpg);
+    background-size: cover;
+    height: 800px;
+    position: relative;
+    isolation: isolate;
+}
+.container::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 800px;
+    background-color: rgba(0, 140, 255, 0.5);
+    width: 100%;
+}
+.sub-container {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 10px black;
+    width: 900px;
+    transform: translateY(20%);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    transition: width 1s;
+}
+.sub-container:hover {
+    width: 940px;
+}
+.sub-container img {
+    width: 400px;
+}
+.center-container {
+    display: flex;
+    animation-name: slideshow1;
+    animation-duration: 2s;
+}
+@keyframes slideshow1 {
+    0%{transform: translateX(200px);}
+    100%{transform: translateX(0);}
+}
+@keyframes slideshow2 {
+    0%{transform: translateX(-200px);}
+    100%{transform: translateX(0);}
+}
+.intro-text {
+    margin: 2rem 0 0 3rem;
+}
+.intro-text h2 {
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 30px;
+}
+.intro-text h3 {
+    letter-spacing: 2px;
+    margin-top: .5rem;
+    color: #0098EF;
+    font-weight: normal;
+    font-size: 20px;
+}
+.intro-text h4{
+    letter-spacing: 1px;
+    color: black;
+    margin-top: 1rem;
+    font-size: 18px;
+}
+.intro-text p {
+    letter-spacing: 1px;
+    color: #0098EF;
+    font-weight: normal;
+    margin-top: .5rem;
+    font-size: 16px;
+}
+.bottom-container {
+    animation-name: slideshow2;
+    animation-duration: 2s;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bottom-container h6, .bottom-container a{
+    letter-spacing: 2px;
+    background-color: black;
+    margin-left: .75rem;
+}
+.bottom-container img {
+    background-color: black;
+}
+.bottom-container img:hover {
+    opacity: 0.7;
+}
+.bottom-container h6 {
+    font-size: 12px;
+    font-weight: normal;
+    color: white;
+}
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    transition: 2s ease;
+    opacity: 0;
+}
+.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.About {
+    padding: 7rem 0 7rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.About h3 {
+    font-size: 30px;
+    color: #0098EF;
+}
+.About p {
+    letter-spacing: 1px;
+    width: 650px;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.Education {
+    padding: 0rem 0 7rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Education h3 {
+    font-size: 30px;
+    color: #0098EF;
+}
+.samsen, .kmitl ,.saintjohn{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+.samsen img, .kmitl img, .saintjohn img{
+    box-shadow: 0px 0px 7px black;
+    margin-right: 2rem;
+    width: 80px;
+    height: 80px;
+}
+.samsen img:hover, .kmitl img:hover, .saintjohn img:hover {
+    transform: scale(1.1, 1.1);
+}
+.samsen p, .kmitl p, .saintjohn p{
+    letter-spacing: 1px;
+}
+.Skills {
+    padding: 0rem 0 7rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Skills h3 {
+    font-size: 30px;
+    color: #0098EF;
+}
+.container-skills {
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.container-skills img{
+    width: 100px;
+    height: 100px;
+}
+.html, .css, .javascript, .python, .java, .c {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 3px 3px 7px black;
+}
+.html:hover, .css:hover, .javascript:hover, .python:hover, .java:hover, .c:hover{
+    transform: scale(1.1, 1.1);
+}
+.html p, .css p, .javascript p, .python p, .java p, .c p {
+    text-align: center;
+    margin-top: .5rem;
+    letter-spacing: 1px;
+    color: #0098EF;
+}
+.contract {
+    background-color: #0098EF;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.contract h3 {
+    box-shadow:  0 0 5px black;
+    border-radius: 30px;
+    padding: .75rem 1.25rem .75rem 1.25rem;
+    transform: translateY(50%);
+    font-size: 30px;
+    color: #0098EF;
+    background-color: white;
+}
+.container-contract {
+    padding: 2rem 2rem 2rem 2rem;
+    box-shadow:  0 0 7px black;
+}
+.email, .phone, .fb, .ig, .gh {
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.fb img:hover, .ig img:hover, .gh img:hover {
+    opacity: 0.7;
+}
+.email img,.phone img, .fb img, .ig img, .gh img {
+    background-color: white;
+    margin: 1rem 1rem 1rem 0;
+    width: 40px;
+}
+.email p,.phone p, .fb p, .ig p, .gh p {
+    letter-spacing: 1px;
+    background-color: white;
+    color: black;
+    margin: 1rem 0 1rem 0;
+}
+@media screen and (max-width: 954px){
+    .sub-container {
+        transform: translateY(5%);
+        width: 600px;
+    }
+    .sub-container img {
+        width: 300px;
+    }
+    .sub-container:hover {
+        width: 620px;
+    }
+    .intro-text {
+        margin-bottom: 2rem;
+    }
+    .intro-text h2 {
+        font-size: 20px;
+    }
+    .intro-text h3 {
+        font-size: 16px;
+    }
+    .intro-text h4 {
+        font-size: 14px;
+    }
+    .intro-text p {
+        font-size: 12px;
+    }
+    #opennav {
+        display: flex;
+    }
+    .nav-rigth{
+        display: none;
+    }
+}
+@media screen and (max-width: 677px) {
+    .sub-container img {
+        width: 280px;
+    }
+    .nav-left {
+        margin-left: 1rem;
+    }
+    #opennav {
+        display: flex;
+    }
+    .samsen, .kmitl ,.saintjohn {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .samsen img, .kmitl img, .saintjohn img{
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .About p {
+        width: 490px;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+    .nav-rigth{
+        display: none;
+    }
+    .sub-container {
+        transform: translateY(5%);
+        width: 280px;
+    }
+    .sub-container:hover {
+        width: 290px;
+    }
+    .center-container {
+        display: grid;
+    }
+    .intro-text {
+        margin-bottom: 2rem;
+    }
+    .intro-text h2 {
+        font-size: 20px;
+    }
+    .intro-text h3 {
+        font-size: 16px;
+    }
+    .intro-text h4 {
+        font-size: 14px;
+    }
+    .intro-text p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 500px){
+    .sub-container img {
+        width: 280px;
+    }
+    .nav-left {
+        margin-left: 1rem;
+    }
+    #opennav {
+        display: flex;
+    }
+    .samsen, .kmitl ,.saintjohn {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .samsen img, .kmitl img, .saintjohn img{
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .About p {
+        width: 280px;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+    .nav-rigth{
+        display: none;
+    }
+    .sub-container {
+        transform: translateY(5%);
+        width: 280px;
+    }
+    .sub-container:hover {
+        width: 290px;
+    }
+    .center-container {
+        display: grid;
+    }
+    .intro-text {
+        margin-bottom: 2rem;
+    }
+    .intro-text h2 {
+        font-size: 20px;
+    }
+    .intro-text h3 {
+        font-size: 16px;
+    }
+    .intro-text h4 {
+        font-size: 14px;
+    }
+    .intro-text p {
+        font-size: 12px;
+    }
+    .container-contract {
+        padding: 2rem 1rem 2rem 1rem;
+        box-shadow:  0 0 7px black;
+    }
+}
